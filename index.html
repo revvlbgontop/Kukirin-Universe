@@ -33,6 +33,93 @@ footer{padding:30px 0;color:#778499;font-size:12px;display:flex;justify-content:
 @media(max-width:800px){.hero{grid-template-columns:1fr;padding-top:48px}.art{min-height:340px}.cards{grid-template-columns:1fr}.navlinks{gap:12px}.navlinks a:nth-child(2){display:none}.support{align-items:flex-start;flex-direction:column}}
 @media(max-width:480px){nav{height:66px}.navlinks{font-size:12px}.navlinks a:nth-child(1){display:none}.art{min-height:270px}.art-fallback{font-size:100px}.btn{width:100%}}
 </style>
+  
+/* KUKIRIN UNIVERSE — GLOW & ANIMATIONS */
+html {
+  scroll-behavior: smooth;
+}
+
+@keyframes kuGlow {
+  0%, 100% {
+    box-shadow: 0 0 8px #ff7a1a22;
+  }
+  50% {
+    box-shadow: 0 0 24px #ff7a1a88;
+  }
+}
+
+@keyframes kuFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+@keyframes kuFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Smooth appearance when the page loads */
+body {
+  animation: kuFadeIn 0.8s ease-out both;
+}
+
+/* Orange glowing buttons */
+button,
+.btn,
+.button,
+a.button,
+a.btn {
+  transition: transform 0.25s ease,
+              box-shadow 0.25s ease,
+              filter 0.25s ease;
+}
+
+button:hover,
+.btn:hover,
+.button:hover,
+a.button:hover,
+a.btn:hover {
+  transform: translateY(-3px);
+  filter: brightness(1.12);
+  box-shadow: 0 0 20px #ff7a1a66;
+}
+
+/* Subtle glow on cards */
+.card,
+.feature-card,
+section {
+  transition: border-color 0.3s ease,
+              box-shadow 0.3s ease;
+}
+
+.card:hover,
+.feature-card:hover {
+  border-color: #ff7a1a88;
+  box-shadow: 0 0 22px #ff7a1a22;
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
 </head>
 <body>
 <div class="wrap">
