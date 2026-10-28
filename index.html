@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#090d16">
+<meta name="description" content="Kukirin Universe — an upcoming Roblox scooter experience. Join the journey and support development.">
+<title>Kukirin Universe — Ride Into the Unknown</title>
+<style>
+:root{--bg:#080b12;--panel:#101725;--muted:#9aa8bc;--text:#f4f7fb;--orange:#ff6b19;--gold:#ffb13b;--blue:#55b8ff}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+a{color:inherit;text-decoration:none}.wrap{width:min(1160px,92%);margin:auto}
+nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px;border-bottom:1px solid #ffffff12}
+.brand{display:flex;align-items:center;gap:11px;font-weight:900;letter-spacing:.06em}.logo{width:40px;height:40px;border-radius:12px;display:grid;place-items:center;background:linear-gradient(135deg,var(--orange),var(--gold));color:#15100b;font-size:22px;box-shadow:0 0 28px #ff6b1930}
+.navlinks{display:flex;gap:25px;color:#c2cada;font-size:14px}.navlinks a:hover{color:white}
+.pill{border:1px solid #ff8c3b66;background:#ff7a1a14;color:#ffc17b;padding:9px 13px;border-radius:999px;font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+.hero{min-height:620px;display:grid;grid-template-columns:1fr 1.05fr;align-items:center;gap:35px;padding:58px 0 70px;position:relative}
+.hero:before{content:"";position:absolute;width:420px;height:420px;left:-170px;top:70px;background:#ff6b1910;filter:blur(80px);pointer-events:none}
+.eyebrow{color:var(--gold);font-weight:800;font-size:12px;letter-spacing:.2em;text-transform:uppercase;display:flex;align-items:center;gap:10px}.eyebrow:before{content:"";width:26px;height:2px;background:var(--orange)}
+h1{font-size:clamp(48px,7vw,88px);line-height:.92;letter-spacing:-.065em;margin:22px 0 22px;font-weight:950}h1 span{display:block;color:var(--orange);text-shadow:0 8px 45px #ff6b1930}
+.lead{font-size:17px;line-height:1.75;color:#b3bfd0;max-width:520px}
+.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 21px;border-radius:12px;font-weight:850;border:1px solid transparent;transition:.2s}.btn:hover{transform:translateY(-2px)}.primary{background:linear-gradient(135deg,var(--orange),#ff9c28);color:#1b1007;box-shadow:0 12px 35px #ff6b1928}.secondary{border-color:#ffffff20;background:#ffffff08;color:#eef4ff}.discord{border-color:#5865f2aa;background:#5865f21a;color:#dfe2ff}
+.note{margin-top:18px;font-size:12px;color:#7f8ca0}
+.art{position:relative;min-height:430px;border:1px solid #ffffff18;border-radius:26px;overflow:hidden;background:radial-gradient(ellipse at 70% 65%,#ff7b2540,transparent 36%),linear-gradient(145deg,#14253b,#0b101b 65%);box-shadow:0 35px 100px #0008}
+.art img{position:absolute;width:100%;height:100%;inset:0;object-fit:cover;opacity:.94}
+.art-fallback{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:160px;opacity:.25}
+.art-label{position:absolute;left:18px;right:18px;bottom:18px;padding:16px 18px;background:#070b12c9;backdrop-filter:blur(14px);border:1px solid #ffffff18;border-radius:16px;display:flex;align-items:center;justify-content:space-between;gap:15px}.art-label strong{display:block;font-size:14px}.art-label small{display:block;color:#a4b0c1;margin-top:5px}.live-dot{width:8px;height:8px;display:inline-block;border-radius:50%;background:#ff9c36;box-shadow:0 0 12px #ff9c36;margin-right:7px}
+section{padding:74px 0;border-top:1px solid #ffffff0d}.section-head{max-width:670px;margin-bottom:30px}.section-head h2{font-size:clamp(30px,4vw,46px);letter-spacing:-.04em;margin:12px 0}.section-head p{color:var(--muted);line-height:1.7;margin:0}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card{padding:24px;border:1px solid #ffffff12;border-radius:18px;background:linear-gradient(145deg,#121b2a,#0c111b)}.card .emoji{font-size:26px}.card h3{margin:18px 0 8px}.card p{color:var(--muted);line-height:1.65;font-size:14px;margin:0}
+.status{display:flex;align-items:center;gap:14px;padding:22px;border:1px solid #ff8d2d38;background:linear-gradient(110deg,#ff7a1a12,#101725);border-radius:18px}.status-icon{font-size:28px}.status p{margin:5px 0 0;color:var(--muted);line-height:1.6;font-size:14px}
+.support{border:1px solid #ff8d2d35;background:radial-gradient(ellipse at 100% 0%,#ff7b2518,transparent 48%),#0e1521;border-radius:24px;padding:clamp(25px,5vw,48px);display:flex;justify-content:space-between;align-items:center;gap:25px}.support h2{font-size:clamp(30px,4vw,42px);letter-spacing:-.04em;margin:10px 0}.support p{max-width:630px;color:var(--muted);line-height:1.7;margin:0}
+footer{padding:30px 0;color:#778499;font-size:12px;display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
+@media(max-width:800px){.hero{grid-template-columns:1fr;padding-top:48px}.art{min-height:340px}.cards{grid-template-columns:1fr}.navlinks{gap:12px}.navlinks a:nth-child(2){display:none}.support{align-items:flex-start;flex-direction:column}}
+@media(max-width:480px){nav{height:66px}.navlinks{font-size:12px}.navlinks a:nth-child(1){display:none}.art{min-height:270px}.art-fallback{font-size:100px}.btn{width:100%}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav>
+  <a class="brand" href="#top"><span class="logo">K</span><span>KUKIRIN <span style="color:#ff8a2a">UNIVERSE</span></span></a>
+  <div class="navlinks"><a href="#about">About</a><a href="#development">Development</a><a href="#support">Support</a></div>
+  <a class="pill" href="https://discord.gg/m2pKdJCssk" target="_blank" rel="noopener">Join Discord ↗</a>
+</nav>
+<main id="top">
+<section class="hero" style="border:0;padding-top:58px">
+  <div>
+    <div class="eyebrow">A new ride is on the horizon</div>
+    <h1>RIDE INTO <span>THE UNKNOWN.</span></h1>
+    <p class="lead">Welcome to <b>Kukirin Universe</b> — an upcoming Roblox experience inspired by electric scooters, exploration, and the freedom to ride. We're building the universe one step at a time.</p>
+    <div class="actions">
+      <a class="btn primary" href="https://www.roblox.com/share?code=e9450c638d8fc346a90edcd5c21c9503&amp;type=ExperienceDetails" target="_blank" rel="noopener">▶ Play on Roblox <span>↗</span></a>
+      <a class="btn secondary" href="#development">Explore the project ↓</a>
+      <a class="btn discord" href="https://discord.gg/m2pKdJCssk" target="_blank" rel="noopener">💬 Join our Discord <span>↗</span></a>
+    </div>
+    <div class="note">The game is still in development. Availability may change as work continues.</div>
+  </div>
+  <div class="art">
+    <div class="art-fallback">🛴</div>
+    <img src="assets/kukirin-scooter.png" alt="Black and orange electric scooter at sunset" onerror="this.style.display='none'">
+    <div class="art-label"><div><strong><span class="live-dot"></span>PROJECT STATUS</strong><small>Kukirin Universe is being built</small></div><span class="pill">WIP / 2026</span></div>
+  </div>
+</section>
+<section id="about">
+  <div class="section-head"><div class="eyebrow">The journey starts here</div><h2>A universe built around the ride.</h2><p>Kukirin Universe is an independent Roblox game project. We're working on the experience and growing the community before everything is ready. Stay tuned as the project takes shape.</p></div>
+  <div class="cards">
+    <article class="card"><div class="emoji">🛴</div><h3>Ride & explore</h3><p>An electric-scooter-inspired experience is at the heart of the project. More details will be shared as features develop.</p></article>
+    <article class="card"><div class="emoji">🌆</div><h3>Discover the world</h3><p>We're working toward a world that players can explore and enjoy. The final design may evolve during development.</p></article>
+    <article class="card"><div class="emoji">⚡</div><h3>More to come</h3><p>New ideas, improvements, and previews will be shared when they're ready. This is only the beginning.</p></article>
+  </div>
+</section>
+<section id="development">
+  <div class="section-head"><div class="eyebrow">Behind the scenes</div><h2>Currently under construction.</h2><p>We're still working on Kukirin Universe and the project website. Thanks for your patience while we build and improve things.</p></div>
+  <div class="status"><div class="status-icon">🚧</div><div><strong>IN DEVELOPMENT</strong><p>The game is not finished yet. Features, visuals, and release timing may change. We'll share confirmed news and sneak peeks as development progresses.</p></div></div>
+</section>
+<section id="support">
+  <div class="support"><div><div class="eyebrow">Help us grow</div><h2>Every bit of support matters.</h2><p>We're excited to bring Kukirin Universe to life, and we'd be very happy to have your support! Check out the Roblox experience, join our Discord community, share the project with friends, and keep an eye out for future updates. Thanks for being here from the beginning. 💛</p></div><div class="actions" style="margin-top:0"><a class="btn primary" href="https://www.roblox.com/share?code=e9450c638d8fc346a90edcd5c21c9503&amp;type=ExperienceDetails" target="_blank" rel="noopener">Support the game ↗</a><a class="btn discord" href="https://discord.gg/m2pKdJCssk" target="_blank" rel="noopener">Join Discord ↗</a></div></div>
+</section>
+</main>
+<footer><span>© 2026 Kukirin Universe · Fan-made project website</span><span><a href="https://discord.gg/m2pKdJCssk" target="_blank" rel="noopener">Discord community ↗</a> · Not affiliated with or endorsed by Kukirin or Roblox.</span></footer>
+</div>
+</body>
+</html>
