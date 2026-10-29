@@ -1,82 +1,520 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#090d16">
-<meta name="description" content="Kukirin Universe — an upcoming Roblox scooter experience. Join the journey and support development.">
-<title>Kukirin Universe — Ride Into the Unknown</title>
+<meta name="theme-color" content="#08090d">
+<meta name="description" content="Welcome to Kukirin Universe — a Roblox scooter experience. Explore the project, meet the team, and join our community.">
+<meta property="og:title" content="Kukirin Universe — Ride Into the Unknown">
+<meta property="og:description" content="Discover Kukirin Universe, follow development, and join the ride.">
+<meta property="og:type" content="website">
+<title>Kukirin Universe | Ride Into the Unknown</title>
+
 <style>
-:root{--bg:#080b12;--panel:#101725;--muted:#9aa8bc;--text:#f4f7fb;--orange:#ff6b19;--gold:#ffb13b;--blue:#55b8ff}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
-a{color:inherit;text-decoration:none}.wrap{width:min(1160px,92%);margin:auto}
-nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px;border-bottom:1px solid #ffffff12}
-.brand{display:flex;align-items:center;gap:11px;font-weight:900;letter-spacing:.06em}.logo{width:40px;height:40px;border-radius:12px;display:grid;place-items:center;background:linear-gradient(135deg,var(--orange),var(--gold));color:#15100b;font-size:22px;box-shadow:0 0 28px #ff6b1930}
-.navlinks{display:flex;gap:25px;color:#c2cada;font-size:14px}.navlinks a:hover{color:white}
-.pill{border:1px solid #ff8c3b66;background:#ff7a1a14;color:#ffc17b;padding:9px 13px;border-radius:999px;font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
-.hero{min-height:620px;display:grid;grid-template-columns:1fr 1.05fr;align-items:center;gap:35px;padding:58px 0 70px;position:relative}
-.hero:before{content:"";position:absolute;width:420px;height:420px;left:-170px;top:70px;background:#ff6b1910;filter:blur(80px);pointer-events:none}
-.eyebrow{color:var(--gold);font-weight:800;font-size:12px;letter-spacing:.2em;text-transform:uppercase;display:flex;align-items:center;gap:10px}.eyebrow:before{content:"";width:26px;height:2px;background:var(--orange)}
-h1{font-size:clamp(48px,7vw,88px);line-height:.92;letter-spacing:-.065em;margin:22px 0 22px;font-weight:950}h1 span{display:block;color:var(--orange);text-shadow:0 8px 45px #ff6b1930}
-.lead{font-size:17px;line-height:1.75;color:#b3bfd0;max-width:520px}
-.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 21px;border-radius:12px;font-weight:850;border:1px solid transparent;transition:.2s}.btn:hover{transform:translateY(-2px)}.primary{background:linear-gradient(135deg,var(--orange),#ff9c28);color:#1b1007;box-shadow:0 12px 35px #ff6b1928}.secondary{border-color:#ffffff20;background:#ffffff08;color:#eef4ff}.discord{border-color:#5865f2aa;background:#5865f21a;color:#dfe2ff}
-.note{margin-top:18px;font-size:12px;color:#7f8ca0}
-.art{position:relative;min-height:430px;border:1px solid #ffffff18;border-radius:26px;overflow:hidden;background:radial-gradient(ellipse at 70% 65%,#ff7b2540,transparent 36%),linear-gradient(145deg,#14253b,#0b101b 65%);box-shadow:0 35px 100px #0008}
-.art img{position:absolute;width:100%;height:100%;inset:0;object-fit:cover;opacity:.94}
-.art-fallback{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:160px;opacity:.25}
-.art-label{position:absolute;left:18px;right:18px;bottom:18px;padding:16px 18px;background:#070b12c9;backdrop-filter:blur(14px);border:1px solid #ffffff18;border-radius:16px;display:flex;align-items:center;justify-content:space-between;gap:15px}.art-label strong{display:block;font-size:14px}.art-label small{display:block;color:#a4b0c1;margin-top:5px}.live-dot{width:8px;height:8px;display:inline-block;border-radius:50%;background:#ff9c36;box-shadow:0 0 12px #ff9c36;margin-right:7px}
-section{padding:74px 0;border-top:1px solid #ffffff0d}.section-head{max-width:670px;margin-bottom:30px}.section-head h2{font-size:clamp(30px,4vw,46px);letter-spacing:-.04em;margin:12px 0}.section-head p{color:var(--muted);line-height:1.7;margin:0}
-.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card{padding:24px;border:1px solid #ffffff12;border-radius:18px;background:linear-gradient(145deg,#121b2a,#0c111b)}.card .emoji{font-size:26px}.card h3{margin:18px 0 8px}.card p{color:var(--muted);line-height:1.65;font-size:14px;margin:0}
-.status{display:flex;align-items:center;gap:14px;padding:22px;border:1px solid #ff8d2d38;background:linear-gradient(110deg,#ff7a1a12,#101725);border-radius:18px}.status-icon{font-size:28px}.status p{margin:5px 0 0;color:var(--muted);line-height:1.6;font-size:14px}
-.support{border:1px solid #ff8d2d35;background:radial-gradient(ellipse at 100% 0%,#ff7b2518,transparent 48%),#0e1521;border-radius:24px;padding:clamp(25px,5vw,48px);display:flex;justify-content:space-between;align-items:center;gap:25px}.support h2{font-size:clamp(30px,4vw,42px);letter-spacing:-.04em;margin:10px 0}.support p{max-width:630px;color:var(--muted);line-height:1.7;margin:0}
-footer{padding:30px 0;color:#778499;font-size:12px;display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
-@media(max-width:800px){.hero{grid-template-columns:1fr;padding-top:48px}.art{min-height:340px}.cards{grid-template-columns:1fr}.navlinks{gap:12px}.navlinks a:nth-child(2){display:none}.support{align-items:flex-start;flex-direction:column}}
-@media(max-width:480px){nav{height:66px}.navlinks{font-size:12px}.navlinks a:nth-child(1){display:none}.art{min-height:270px}.art-fallback{font-size:100px}.btn{width:100%}}
+:root {
+  --bg: #08090d;
+  --panel: #10131b;
+  --panel2: #151923;
+  --orange: #ff7417;
+  --gold: #ffbd4a;
+  --text: #f8f8fc;
+  --muted: #a5adbd;
+  --line: rgba(255,255,255,.10);
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 90px; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+  overflow-x: hidden;
+}
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse at 12% 10%, #ff741715, transparent 38%),
+    radial-gradient(ellipse at 88% 48%, #ffbd4a0b, transparent 35%),
+    linear-gradient(#ffffff05 1px, transparent 1px),
+    linear-gradient(90deg, #ffffff05 1px, transparent 1px);
+  background-size: auto, auto, 48px 48px, 48px 48px;
+}
+a { color: inherit; text-decoration: none; }
+button, a { -webkit-tap-highlight-color: transparent; }
+.wrap { width: min(1160px, 92%); margin: auto; }
+
+nav {
+  min-height: 76px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  border-bottom: 1px solid var(--line);
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  font-weight: 950;
+  letter-spacing: .04em;
+}
+.logo {
+  width: 43px;
+  height: 43px;
+  display: grid;
+  place-items: center;
+  border-radius: 14px;
+  color: #17100a;
+  background: linear-gradient(135deg, var(--gold), var(--orange));
+  box-shadow: 0 0 30px #ff74173c;
+  font-size: 24px;
+}
+.brand-orange { color: var(--orange); }
+.navlinks { display: flex; gap: 24px; color: var(--muted); font-size: 14px; }
+.navlinks a { transition: color .2s; }
+.navlinks a:hover { color: var(--gold); }
+
+.btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 9px;
+  padding: 13px 19px;
+  border-radius: 12px;
+  font-weight: 850;
+  font-size: 14px;
+  border: 1px solid var(--line);
+  transition: transform .22s, box-shadow .22s, border-color .22s, background .22s;
+}
+.btn:hover { transform: translateY(-3px); }
+.primary {
+  background: linear-gradient(135deg, var(--gold), var(--orange));
+  color: #1a1008;
+  border-color: transparent;
+  box-shadow: 0 9px 30px #ff74172a;
+}
+.primary:hover { box-shadow: 0 13px 40px #ff741755; }
+.secondary { background: #ffffff07; }
+.secondary:hover { border-color: #ffbd4a88; background: #ffbd4a0b; }
+.discord { background: #5865f21a; border-color: #7280ff66; }
+.social { background: #ffffff07; }
+.social:hover { border-color: #ff7417aa; }
+
+.hero {
+  min-height: 590px;
+  padding: 68px 0 76px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 45px;
+}
+.eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--gold);
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+}
+.eyebrow::before {
+  content: "";
+  width: 25px;
+  height: 2px;
+  background: var(--orange);
+  box-shadow: 0 0 12px var(--orange);
+}
+h1 {
+  margin: 23px 0;
+  font-size: clamp(46px, 6.8vw, 84px);
+  line-height: .94;
+  letter-spacing: -.065em;
+  font-weight: 1000;
+}
+h1 span {
+  display: block;
+  color: var(--orange);
+  text-shadow: 0 0 38px #ff741738;
+}
+.lead { color: #b8c0ce; line-height: 1.8; font-size: 16px; max-width: 530px; }
+.actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 27px; }
+.note { margin-top: 18px; color: #7e889a; font-size: 12px; line-height: 1.7; }
+
+.art {
+  position: relative;
+  min-height: 430px;
+  overflow: hidden;
+  border: 1px solid #ffffff19;
+  border-radius: 26px;
+  isolation: isolate;
+  background:
+    radial-gradient(ellipse at 70% 65%, #ff74174a, transparent 40%),
+    radial-gradient(ellipse at 25% 20%, #263b5c, transparent 60%),
+    linear-gradient(145deg, #171d2b, #090b12 75%);
+  box-shadow: 0 30px 90px #0008, inset 0 0 55px #ff74170b;
+}
+.art::before {
+  content: "";
+  position: absolute;
+  inset: -50%;
+  z-index: -1;
+  background: conic-gradient(from 0deg, transparent, #ff74171c, transparent, #ffbd4a14, transparent);
+  animation: orbit 22s linear infinite;
+}
+.art::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(125deg, transparent 30%, #ffffff0b 50%, transparent 65%);
+  transform: translateX(-100%);
+  animation: shine 7s ease-in-out infinite;
+}
+.art img { width: 100%; height: 100%; position: absolute; inset: 0; object-fit: cover; opacity: .88; }
+.art-fallback { position: absolute; inset: 0; display: grid; place-items: center; font-size: 145px; opacity: .3; }
+.art-label {
+  position: absolute;
+  left: 16px; right: 16px; bottom: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 16px;
+  border: 1px solid #ffffff20;
+  border-radius: 15px;
+  background: #080a10d9;
+  backdrop-filter: blur(15px);
+}
+.art-label strong { font-size: 12px; letter-spacing: .08em; }
+.art-label small { display: block; margin-top: 5px; color: var(--muted); }
+.live-dot {
+  display: inline-block;
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: var(--gold);
+  box-shadow: 0 0 12px var(--orange);
+  margin-right: 8px;
+}
+.pill {
+  padding: 8px 11px;
+  color: var(--gold);
+  border: 1px solid #ffbd4a44;
+  border-radius: 999px;
+  background: #ffbd4a0d;
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: .08em;
+}
+
+section { padding: 76px 0; border-top: 1px solid #ffffff0d; }
+.section-head { max-width: 700px; margin-bottom: 30px; }
+.section-head h2, .support h2 {
+  margin: 14px 0;
+  font-size: clamp(30px, 4.5vw, 47px);
+  line-height: 1.08;
+  letter-spacing: -.045em;
+}
+.section-head p, .support p { color: var(--muted); line-height: 1.8; margin: 0; }
+
+.cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 17px; }
+.card {
+  padding: 25px;
+  border: 1px solid var(--line);
+  border-radius: 19px;
+  background: linear-gradient(145deg, #151a26, #0d1017);
+  transition: transform .25s, border-color .25s, box-shadow .25s;
+}
+.card:hover {
+  transform: translateY(-6px);
+  border-color: #ff741766;
+  box-shadow: 0 18px 42px #0005, 0 0 24px #ff74170a;
+}
+.card .emoji { font-size: 30px; }
+.card h3 { margin: 18px 0 9px; }
+.card p { color: var(--muted); line-height: 1.7; font-size: 14px; margin: 0; }
+
+.status {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 23px;
+  border: 1px solid #ff8d2d40;
+  border-radius: 18px;
+  background: linear-gradient(110deg, #ff741715, #111620);
+}
+.status-icon { font-size: 30px; }
+.status p { margin: 6px 0 0; color: var(--muted); line-height: 1.7; font-size: 14px; }
+
+.team-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 17px; }
+.member {
+  padding: 25px;
+  display: flex;
+  align-items: center;
+  gap: 17px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: linear-gradient(135deg, #171c28, #0d1017);
+  transition: border-color .2s, transform .2s;
+}
+.member:hover { border-color: #ff741766; transform: translateY(-4px); }
+.member-icon {
+  flex: 0 0 56px;
+  height: 56px;
+  display: grid;
+  place-items: center;
+  border-radius: 17px;
+  background: linear-gradient(135deg, #ffbd4a2a, #ff741720);
+  border: 1px solid #ff741744;
+  font-size: 27px;
+}
+.member small { color: var(--gold); text-transform: uppercase; letter-spacing: .15em; font-weight: 850; }
+.member h3 { margin: 5px 0 0; font-size: 22px; }
+
+.support {
+  padding: clamp(25px, 5vw, 48px);
+  border: 1px solid #ff8d2d3c;
+  border-radius: 25px;
+  background:
+    radial-gradient(ellipse at 100% 0%, #ff74171e, transparent 48%),
+    linear-gradient(135deg, #131925, #0d1017);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 28px;
+}
+.support > div:first-child { max-width: 650px; }
+.support .actions { margin-top: 0; max-width: 270px; }
+.support .btn { white-space: nowrap; }
+
+.social-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 17px; }
+.social-card {
+  padding: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: linear-gradient(135deg, #161b27, #0d1017);
+  transition: transform .2s, border-color .2s;
+}
+.social-card:hover { transform: translateY(-4px); border-color: #ff741766; }
+.social-card h3 { margin: 0 0 7px; }
+.social-card p { color: var(--muted); font-size: 13px; margin: 0; line-height: 1.6; }
+.social-icon { font-size: 30px; margin-right: 12px; }
+
+footer {
+  padding: 30px 0;
+  color: #7d8799;
+  font-size: 12px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 14px;
+  border-top: 1px solid var(--line);
+}
+footer a:hover { color: var(--gold); }
+
+.reveal { opacity: 0; transform: translateY(22px); transition: opacity .7s ease, transform .7s ease; }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+
+@keyframes orbit { to { transform: rotate(360deg); } }
+@keyframes shine {
+  0%, 55% { transform: translateX(-100%); }
+  85%, 100% { transform: translateX(100%); }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: .01ms !important;
+  }
+  .reveal { opacity: 1; transform: none; }
+}
+@media (max-width: 800px) {
+  .hero { grid-template-columns: 1fr; padding-top: 48px; gap: 30px; }
+  .art { min-height: 370px; }
+  .cards { grid-template-columns: 1fr; }
+  .support { align-items: flex-start; flex-direction: column; }
+  .support .actions { max-width: none; width: 100%; }
+  .navlinks { gap: 13px; }
+}
+@media (max-width: 540px) {
+  nav { min-height: 68px; }
+  .navlinks { display: none; }
+  .hero { padding: 42px 0 55px; }
+  .art { min-height: 285px; }
+  .art-fallback { font-size: 100px; }
+  .actions, .actions .btn { width: 100%; }
+  .team-grid, .social-grid { grid-template-columns: 1fr; }
+  .art-label { padding: 12px; }
+  .pill { font-size: 9px; }
+  section { padding: 58px 0; }
+  footer { flex-direction: column; }
+}
 </style>
 </head>
+
 <body>
 <div class="wrap">
 <nav>
-  <a class="brand" href="#top"><span class="logo">K</span><span>KUKIRIN <span style="color:#ff8a2a">UNIVERSE</span></span></a>
-  <div class="navlinks"><a href="#about">About</a><a href="#development">Development</a><a href="#support">Support</a></div>
-  <a class="pill" href="https://discord.gg/m2pKdJCssk" target="_blank" rel="noopener">Join Discord ↗</a>
+  <a class="brand" href="#top" aria-label="Kukirin Universe home">
+    <span class="logo">K</span>
+    <span>KUKIRIN <span class="brand-orange">UNIVERSE</span></span>
+  </a>
+  <div class="navlinks">
+    <a href="#about">About</a>
+    <a href="#development">Development</a>
+    <a href="#team">Our Team</a>
+    <a href="#socials">Socials</a>
+  </div>
+  <a class="btn secondary" href="https://discord.gg/m2pKdJCssk" target="_blank" rel="noopener noreferrer">Join Discord ↗</a>
 </nav>
+
 <main id="top">
-<section class="hero" style="border:0;padding-top:58px">
-  <div>
+<section class="hero" style="border:0">
+  <div class="reveal">
     <div class="eyebrow">A new ride is on the horizon</div>
     <h1>RIDE INTO <span>THE UNKNOWN.</span></h1>
-    <p class="lead">Welcome to <b>Kukirin Universe</b> — an upcoming Roblox experience inspired by electric scooters, exploration, and the freedom to ride. We're building the universe one step at a time.</p>
+    <p class="lead">
+      Welcome to <b>Kukirin Universe</b> — a Roblox experience inspired by electric scooters, exploration, and the freedom to ride. We're building the universe one step at a time.
+    </p>
     <div class="actions">
-      <a class="btn primary" href="https://www.roblox.com/share?code=e9450c638d8fc346a90edcd5c21c9503&amp;type=ExperienceDetails" target="_blank" rel="noopener">▶ Play on Roblox <span>↗</span></a>
+      <a class="btn primary" href="https://www.roblox.com/share?code=e9450c638d8fc346a90edcd5c21c9503&amp;type=ExperienceDetails" target="_blank" rel="noopener noreferrer">▶ Play on Roblox ↗</a>
       <a class="btn secondary" href="#development">Explore the project ↓</a>
-      <a class="btn discord" href="https://discord.gg/m2pKdJCssk" target="_blank" rel="noopener">💬 Join our Discord <span>↗</span></a>
+      <a class="btn discord" href="https://discord.gg/m2pKdJCssk" target="_blank" rel="noopener noreferrer">💬 Join Discord ↗</a>
     </div>
-    <div class="note">The game is still in development. Availability may change as work continues.</div>
+    <p class="note">The game is in development. Features and availability may change as work continues.</p>
   </div>
-  <div class="art">
-    <div class="art-fallback">🛴</div>
-    <img src="assets/kukirin-scooter.png" alt="Black and orange electric scooter at sunset" onerror="this.style.display='none'">
-    <div class="art-label"><div><strong><span class="live-dot"></span>PROJECT STATUS</strong><small>Kukirin Universe is being built</small></div><span class="pill">WIP / 2026</span></div>
+
+  <div class="art reveal">
+    <div class="art-fallback" aria-hidden="true">🛴</div>
+    <img src="assets/kukirin-scooter.png" alt="Black and orange electric scooter" onerror="this.style.display='none'">
+    <div class="art-label">
+      <div><strong><span class="live-dot"></span>PROJECT STATUS</strong><small>Kukirin Universe is being built</small></div>
+      <span class="pill">IN DEVELOPMENT</span>
+    </div>
   </div>
 </section>
+
 <section id="about">
-  <div class="section-head"><div class="eyebrow">The journey starts here</div><h2>A universe built around the ride.</h2><p>Kukirin Universe is an independent Roblox game project. We're working on the experience and growing the community before everything is ready. Stay tuned as the project takes shape.</p></div>
+  <div class="section-head reveal">
+    <div class="eyebrow">The journey starts here</div>
+    <h2>A universe built around the ride.</h2>
+    <p>Kukirin Universe is an independent Roblox game project. We're working on the experience and growing the community before everything is ready. Stay tuned as the project takes shape.</p>
+  </div>
   <div class="cards">
-    <article class="card"><div class="emoji">🛴</div><h3>Ride & explore</h3><p>An electric-scooter-inspired experience is at the heart of the project. More details will be shared as features develop.</p></article>
-    <article class="card"><div class="emoji">🌆</div><h3>Discover the world</h3><p>We're working toward a world that players can explore and enjoy. The final design may evolve during development.</p></article>
-    <article class="card"><div class="emoji">⚡</div><h3>More to come</h3><p>New ideas, improvements, and previews will be shared when they're ready. This is only the beginning.</p></article>
+    <article class="card reveal"><div class="emoji">🛴</div><h3>Ride &amp; explore</h3><p>An electric-scooter-inspired experience is at the heart of the project. More details will be shared as features develop.</p></article>
+    <article class="card reveal"><div class="emoji">🌆</div><h3>Discover the world</h3><p>We're working toward a world that players can explore and enjoy. The final design may evolve during development.</p></article>
+    <article class="card reveal"><div class="emoji">⚡</div><h3>More to come</h3><p>New ideas, improvements, and previews will be shared when they're ready. This is only the beginning.</p></article>
   </div>
 </section>
+
 <section id="development">
-  <div class="section-head"><div class="eyebrow">Behind the scenes</div><h2>Currently under construction.</h2><p>We're still working on Kukirin Universe and the project website. Thanks for your patience while we build and improve things.</p></div>
-  <div class="status"><div class="status-icon">🚧</div><div><strong>IN DEVELOPMENT</strong><p>The game is not finished yet. Features, visuals, and release timing may change. We'll share confirmed news and sneak peeks as development progresses.</p></div></div>
+  <div class="section-head reveal">
+    <div class="eyebrow">Behind the scenes</div>
+    <h2>Currently under construction.</h2>
+    <p>We're still working on Kukirin Universe and the project website. Thanks for your patience while we build and improve things.</p>
+  </div>
+  <div class="status reveal">
+    <div class="status-icon">🚧</div>
+    <div><strong>IN DEVELOPMENT</strong><p>The game is not finished yet. Features, visuals, and release timing may change. We'll share confirmed news and sneak peeks as development progresses.</p></div>
+  </div>
 </section>
+
+<section id="team">
+  <div class="section-head reveal">
+    <div class="eyebrow">The people behind the project</div>
+    <h2>Meet the team.</h2>
+    <p>Meet the people helping bring Kukirin Universe to life.</p>
+  </div>
+  <div class="team-grid">
+    <article class="member reveal">
+      <div class="member-icon" aria-hidden="true">👑</div>
+      <div><small>Owner</small><h3>ykluca</h3></div>
+    </article>
+    <article class="member reveal">
+      <div class="member-icon" aria-hidden="true">⚡</div>
+      <div><small>Developer</small><h3>Revv</h3></div>
+    </article>
+  </div>
+</section>
+
+<section id="socials">
+  <div class="section-head reveal">
+    <div class="eyebrow">Follow the journey</div>
+    <h2>Join us beyond the game.</h2>
+    <p>Follow our channels for content, updates, and community highlights.</p>
+  </div>
+  <div class="social-grid">
+    <a class="social-card reveal" href="https://tiktok.com/@kukirinlifeofficial" target="_blank" rel="noopener noreferrer">
+      <div style="display:flex;align-items:center">
+        <span class="social-icon">🎵</span>
+        <div><h3>TikTok</h3><p>@kukirinlifeofficial</p></div>
+      </div>
+      <span aria-hidden="true">↗</span>
+    </a>
+    <a class="social-card reveal" href="https://www.youtube.com/channel/UC0RwBUao8F-6lE5aCEHrGxw" target="_blank" rel="noopener noreferrer">
+      <div style="display:flex;align-items:center">
+        <span class="social-icon">▶️</span>
+        <div><h3>YouTube</h3><p>Watch our videos</p></div>
+      </div>
+      <span aria-hidden="true">↗</span>
+    </a>
+  </div>
+</section>
+
 <section id="support">
-  <div class="support"><div><div class="eyebrow">Help us grow</div><h2>Every bit of support matters.</h2><p>We're excited to bring Kukirin Universe to life, and we'd be very happy to have your support! Check out the Roblox experience, join our Discord community, share the project with friends, and keep an eye out for future updates. Thanks for being here from the beginning. 💛</p></div><div class="actions" style="margin-top:0"><a class="btn primary" href="https://www.roblox.com/share?code=e9450c638d8fc346a90edcd5c21c9503&amp;type=ExperienceDetails" target="_blank" rel="noopener">Support the game ↗</a><a class="btn discord" href="https://discord.gg/m2pKdJCssk" target="_blank" rel="noopener">Join Discord ↗</a></div></div>
+  <div class="support reveal">
+    <div>
+      <div class="eyebrow">Help us grow</div>
+      <h2>Every bit of support matters.</h2>
+      <p>We're excited to bring Kukirin Universe to life! Check out the Roblox experience, join our Discord community, share the project with friends, and follow our socials for future updates. Thanks for being here from the beginning. 🧡</p>
+    </div>
+    <div class="actions">
+      <a class="btn primary" href="https://www.roblox.com/share?code=e9450c638d8fc346a90edcd5c21c9503&amp;type=ExperienceDetails" target="_blank" rel="noopener noreferrer">Support the game ↗</a>
+      <a class="btn discord" href="https://discord.gg/m2pKdJCssk" target="_blank" rel="noopener noreferrer">Join Discord ↗</a>
+    </div>
+  </div>
 </section>
 </main>
-<footer><span>© 2026 Kukirin Universe · Fan-made project website</span><span><a href="https://discord.gg/m2pKdJCssk" target="_blank" rel="noopener">Discord community ↗</a> · Not affiliated with or endorsed by Kukirin or Roblox.</span></footer>
+
+<footer>
+  <span>© 2026 Kukirin Universe · Fan-made project website</span>
+  <span>
+    <a href="https://discord.gg/m2pKdJCssk" target="_blank" rel="noopener noreferrer">Discord ↗</a>
+    · <a href="https://tiktok.com/@kukirinlifeofficial" target="_blank" rel="noopener noreferrer">TikTok ↗</a>
+    · <a href="https://www.youtube.com/channel/UC0RwBUao8F-6lE5aCEHrGxw" target="_blank" rel="noopener noreferrer">YouTube ↗</a>
+    · Not affiliated with or endorsed by Kukirin or Roblox.
+  </span>
+</footer>
 </div>
+
+<script>
+(() => {
+  const items = document.querySelectorAll(".reveal");
+  if (!("IntersectionObserver" in window) ||
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    items.forEach(item => item.classList.add("visible"));
+    return;
+  }
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  items.forEach(item => observer.observe(item));
+})();
+</script>
 </body>
 </html>
